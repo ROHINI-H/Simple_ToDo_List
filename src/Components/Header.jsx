@@ -1,8 +1,8 @@
 function Header() {
     return (
-        <>
-            <h1>Simple ToDo List</h1>
-        </>
+        <header>
+            <h1 class="text-4xl font-serif text-center p-10 ">Simple ToDo List</h1>
+        </header>
     )
 }
 
