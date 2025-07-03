@@ -35,15 +35,15 @@ function App() {
   }
 
   return (
-    <>
+    <div className="max-w-xl mx-auto mt-15 p-10 bg-white shadow rounded">
       <Header />
-      <div>
-        <input type="text" placeholder="Add task..." value={Todo} onChange={(e) => setTodo(e.target.value)} onKeyDown={(e) => e.key == 'Enter' && addItem()} />
-        <button onClick={addItem}>Add</button>
+      <div className="flex justify-center">
+        <input className="w-xs border rounded-lg mr-7 p-3" type="text" placeholder="Add task..." value={Todo} onChange={(e) => setTodo(e.target.value)} onKeyDown={(e) => e.key == 'Enter' && addItem()} />
+        <button className="bg-sky-300 hover:bg-sky-700 hover:text-white text-yellow-950 font-bold tracking-wide px-4 rounded" onClick={addItem}>Add</button>
       </div>
 
       <ToDoList list={items} completeItem={completeItem} deleteItem={deleteItem} editItem={editItem} />
-    </>
+    </div>
   )
 }
 
